@@ -1,6 +1,4 @@
 var $$ = Dom7;
-var $B = 'http://192.168.100.2/boxsy/';
-
 var app = new Framework7({
   root: '#app', // App root element
 
@@ -62,7 +60,8 @@ $$('#login-listener .login-button').on('click', function () {
     }, function(data, status, xhr){
       app.preloader.hide();
       if(data.status){
-        app.views.main.router.navigate("/home/");
+        window.location = $B+"home";
+        // app.views.main.router.navigate("/home/");
       }
       app.dialog.alert(data.message);
 
@@ -72,4 +71,11 @@ $$('#login-listener .login-button').on('click', function () {
     }, "json");
 
   // app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
+});
+
+// Login Screen Demo
+$$('#logout-button').on('click', function () {
+  app.dialog.confirm("Are you sure to logout?", "Confirmation", function(){
+    window.location = $B+"logout";
+  }, null);
 });

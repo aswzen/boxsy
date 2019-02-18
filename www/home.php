@@ -21,13 +21,12 @@
   
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <link rel="icon" href="assets/icons/favicon.png">
+  <link rel="apple-touch-icon" href="<?= Flight::get('flight.www') ?>assets/icons/apple-touch-icon.png">
+  <link rel="icon" href="<?= Flight::get('flight.www') ?>assets/icons/favicon.png">
   
-  
-  <link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
-  <link rel="stylesheet" href="css/icons.css">
-  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="<?= Flight::get('flight.www') ?>framework7/css/framework7.bundle.min.css">
+  <link rel="stylesheet" href="<?= Flight::get('flight.www') ?>css/icons.css">
+  <link rel="stylesheet" href="<?= Flight::get('flight.www') ?>css/app.css">
 </head>
 <body>
   <div id="app">
@@ -71,11 +70,6 @@
             <i class="icon material-icons md-only">view_list</i>
             <span class="tabbar-label">Catalog</span>
           </a>
-          <a href="#view-settings" class="tab-link">
-            <i class="icon f7-icons ios-only">settings_fill</i>
-            <i class="icon material-icons md-only">settings</i>
-            <span class="tabbar-label">Settings</span>
-          </a>
         </div>
       </div>
 
@@ -85,9 +79,9 @@
           <!-- Top Navbar -->
           <div class="navbar">
             <div class="navbar-inner">
-              <div class="title sliding panel-open" data-panel="left">☒ Boxsy</div>
+              <div class="title sliding panel-open" data-panel="left">📦 Boxsy</div>
               <div class="right">
-                <a href="/index/" id="logout-button" class="link icon-only">
+                <a href="#" id="logout-button" class="link icon-only">
                   <i class="icon f7-icons ios-only">close_round</i>
                   <i class="icon material-icons md-only">close_round</i>
                 </a>
@@ -160,10 +154,6 @@
         <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
       </div>
 
-      <!-- Settings View -->
-      <div id="view-settings" class="view view-init tab" data-view="settings" data-url="/settings/">
-        <!-- Settings page will be loaded here dynamically from /settings/ route -->
-      </div>
     </div>
 
 
@@ -229,11 +219,14 @@
   </div>
   
   <!-- Framework7 library -->
-  <script src="framework7/js/framework7.bundle.min.js"></script>
+  <script src="<?= Flight::get('flight.www') ?>framework7/js/framework7.bundle.min.js"></script>
   
   <!-- App routes -->
-  <script src="js/routes.js"></script>
+  <script src="<?= Flight::get('flight.www') ?>js/routes.js"></script>
   <!-- App scripts -->
-  <script src="js/app.js"></script>
+  <script type="text/javascript">
+    var $B = "<?= Flight::get('flight.base_url') ?>";
+  </script>
+  <script src="<?= Flight::get('flight.www') ?>js/app.js"></script>
 </body>
 </html>

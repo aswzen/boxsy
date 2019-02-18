@@ -139,7 +139,7 @@ class Engine {
         $this->set('flight.case_sensitive', false);
         $this->set('flight.handle_errors', true);
         $this->set('flight.log_errors', false);
-        $this->set('flight.views.path', './views');
+        $this->set('flight.views.path', './www');
         $this->set('flight.views.extension', '.php');
 
         // Startup configuration

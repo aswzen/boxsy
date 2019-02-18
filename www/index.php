@@ -21,13 +21,13 @@
   
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <link rel="icon" href="assets/icons/favicon.png">
+  <link rel="apple-touch-icon" href="<?= Flight::get('flight.www') ?>assets/icons/apple-touch-icon.png">
+  <link rel="icon" href="<?= Flight::get('flight.www') ?>assets/icons/favicon.png">
   
   
-  <link rel="stylesheet" href="framework7/css/framework7.bundle.min.css">
-  <link rel="stylesheet" href="css/icons.css">
-  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="<?= Flight::get('flight.www') ?>framework7/css/framework7.bundle.min.css">
+  <link rel="stylesheet" href="<?= Flight::get('flight.www') ?>css/icons.css">
+  <link rel="stylesheet" href="<?= Flight::get('flight.www') ?>css/app.css">
 </head>
 <body>
   <div id="app">
@@ -41,7 +41,7 @@
       <div  class="view view-main view-init">
         <div class="page">
           <div class="page-content login-screen-content">
-            <div class="login-screen-title"><img src="assets/box.png" style="width:15%"/><br>Boxsy</div>
+            <div class="login-screen-title"><img src="<?= Flight::get('flight.www') ?>assets/box.png" style="width:15%"/><br>Boxsy</div>
             <div class="list">
               <ul>
                 <li class="item-content item-input">
@@ -78,11 +78,14 @@
   </div>
   
   <!-- Framework7 library -->
-  <script src="framework7/js/framework7.bundle.min.js"></script>
+  <script src="<?= Flight::get('flight.www') ?>framework7/js/framework7.bundle.min.js"></script>
   
   <!-- App routes -->
-  <script src="js/routes.js"></script>
+  <script src="<?= Flight::get('flight.www') ?>js/routes.js"></script>
   <!-- App scripts -->
-  <script src="js/app.js"></script>
+  <script type="text/javascript">
+    var $B = "<?= Flight::get('flight.base_url') ?>";
+  </script>
+  <script src="<?= Flight::get('flight.www') ?>js/app.js"></script>
 </body>
 </html>
